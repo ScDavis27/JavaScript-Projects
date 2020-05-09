@@ -1,11 +1,10 @@
-function My_First_Function() {
-    var str="The text should be pink. I hope this actually works!";
-    var result=str.fontcolor("pink");
-    document.getElementById("Pink_Text").innerHTML=result;
+function myFunction(p1, p2) {
+    return p1 * p2;
 }
 
-function myFunction() {
-    var sentence="I am learning";
-    sentence+=" a lot from this book!";
-    document.getElementById("Concatenate").innerHTML=sentence;
-}
+
+
+
+
+
+

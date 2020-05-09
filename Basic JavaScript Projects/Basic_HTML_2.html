@@ -4,14 +4,16 @@
         <script src="JS/Basic_JavaScript_2.js"></script>
     </head>
     <body>
-        <p id="Pink_Text">JavaScript can change HTML content.</p>
+        <p id="demo"></p>
 
-        <button onclick="My_First_Function()" id="Pink_Text">Click on it!
-        </button>
+        <button onclick="myFunction()">Try it</button>
 
-        <p id="Concatenate"></p>
-        
-        <p id="Concatenate" onclick="myFunction()">Mash it</p>
+        <script>
+            function myFunction(p1, p2) {
+                return p1 * p2;
+            }
+            document.getElementById("demo").innerHTML = myFunction(7, 6);
+        </script>
 
         
     </body>
