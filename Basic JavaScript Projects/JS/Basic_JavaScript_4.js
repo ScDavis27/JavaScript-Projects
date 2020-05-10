@@ -8,6 +8,5 @@ function my_Dictionary() {
     };
     delete Car.Style
     document.getElementById("Dictionary").innerHTML = Car.Style;
-    document.getElementById("Dictionary").innerHTML = Car.Make;
 }
 
