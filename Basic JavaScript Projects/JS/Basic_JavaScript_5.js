@@ -1,10 +1,10 @@
-document.write(typeof "word");
+document.writeln(typeof "word");
 
-document.write(typeof 3);
+document.writeln(typeof 3);
 
 console.log(8+8);
 
-document.write("22"+5);
+document.writeln("22"+5);
 
 console.log(18>22);
 
