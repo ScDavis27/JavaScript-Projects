@@ -57,7 +57,7 @@ function Time_function() {
         Reply = "It is the afternoon.";
     }
     else {
-        Reply = "It is evening time"; 
+        Reply = "It is evening time."; 
     }
     document.getElementById("Time_of_day").innerHTML = Reply;
 }
