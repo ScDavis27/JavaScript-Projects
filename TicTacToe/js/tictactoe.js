@@ -31,7 +31,7 @@ function rollForTurn() {
             pTwo = 2;
         }
         txt1 = "Player 1 rolled ["+pOne+"]<br>";
-        WriteMsg(txt1);
+        writeMsg(txt1);
         txt1 = txt1 + "Player 2 rolled ["+pTwo+"]<br><br>";
         setTimeout(function() {writeMsg(txt1);}, 1000); // time delay for dramatic effect
     }
@@ -63,7 +63,7 @@ function startGame() {
 
     // assign proper state of the control buttons
     var btn = document.getElementById('btnStart');
-    btnDisable(btn); // disable the start button since the game is now afoot
+    btnDisabled(btn); // disable the start button since the game is now afoot
     var btn = document.getElementById('btnStop');
     stopEnabled(btn); // enable the stop button since the game is now afoot
 
@@ -184,7 +184,7 @@ function determineAvatar() {
 // this function changes active player over to the other player
 function avatarPlaced() {
     var parseText = document.getElementById('gameMsg').innerHTML;
-    var showPlayer = document.getElementById('showplayer'); // select the current element to memory
+    var showPlayer = document.getElementById('showPlayer'); // select the current element to memory
     // check if there is already a winner...if there is, then dont continue the game
     if (parseText == "That's three in a row, Player 1 wins!" || parseText == "That's three in a row, Player 2 wins!"){
             showPlayer.innerHTML = "Game Stopped";
@@ -231,7 +231,7 @@ function recordMove(currentMove) {
 function checkForWinCon() {
     var squareArray = [];
     var target = document.getElementById('boardState');
-    var target = target.innerHTML; // raw array with squares and avatars
+    var info = target.innerHTML; // raw array with squares and avatars
     info = info.substring(1); // remove leading comma
     info = info.split(','); // separate the string by commas into an array
     info.sort(); // sort the square array in order despite the actual gameplay sequence
@@ -292,7 +292,7 @@ function glowBoard(pos) {
         if (i == index0) {
             var bg1 = squares[i];
             blink();
-            winSounds();
+            winSound();
             setTimeout(function() {bg1.style.backgroundColor = 'rgb(244, 179, 66)';}, 100);
             setTimeout(function() {bg1.style.backgroundColor = 'rgb(244, 238, 66)';}, 200);
             setTimeout(function() {bg1.style.backgroundColor = 'rgb(197, 244, 66)';}, 300);
@@ -348,7 +348,7 @@ function tieSound() {
     setTimeout(function() {sound.play();}, 500);
 }
 function winSound() {
-    var sound = documnet.getElementById("winGame");
+    var sound = document.getElementById("winGame");
     setTimeout(function() {sound.play();}, 500);
     setTimeout(function() {sound.pause();}, 2700); // add delay to these to keep sound short
     setTimeout(function() {sound.currentTime = 0;}, 2800);
@@ -605,7 +605,7 @@ function square2Animate() {
         if (verdict == undefined) { // if verdict is empty than the square is unoccupied.
             var paintAvatar = determineAvatar(); // get the correct avatar to paint for the active player
             var selected = document.getElementsByClassName(paintAvatar)[1]; // paint avatar
-            if (paintAvatar == "0") { // change these all to ternary statements instead
+            if (paintAvatar == "O") { // change these all to ternary statements instead
                 animateO(selected); // call function to animate O
             } else if (paintAvatar == "X") {
                 animateX(selected); // call function to animate X
@@ -788,5 +788,5 @@ function animateO(selected) {
 
 // this function will perform the animation for the X avitar.
 function animateX(selected) {
-    selected.style.transform = (selected.style.transform == "translateY(-100%)" || null) ? "translateY(0%)" : "translateY(-100%)";
+    selected.style.transform = (selected.style.transform == "translateY(-100%)" || null) ? "translateY(0%)" : "translateY(0%)";
 }
