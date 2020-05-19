@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>The Alaskan Frontier | Animals</title>
+		<link rel="stylesheet" type="text/css" href="./css/one_page_website.css">
+	</head>
+	<body>
+	
+		<!-- NAV -->
+		<div>
+			<div>
+				<ul>
+					<a href="#home" id="link">HOME</li></a>
+					<a href="#gallery">GALLERY</li></a>
+					<a href="#video">VIDEO</li></a>
+					<a href="#contact">NEWSLETTER</li></a>
+				</ul>
+			</div>
+		</div>
+		<!-- END NAV -->
+	
+		<!-- HOME -->
+		<div id="home">
+			<div>
+				<div>
+					<span>The Wild Alaskan Frontier</span>
+				</div>
+			</div>
+		</div>
+		<!-- END HOME -->
+	
+		<!-- GALLERY -->
+		<section>
+			<div id="gallery">
+				
+				<h2 style="text-align: center;">Wild Animals of Alaska</h2>
+
+				<div class="row">
+					<div class="column">
+						<img src="./images/thumb/thumbnail_5.png" width="100%"
+				onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="./images/thumb/thumbnail_4.png" width="100%"
+				onclick="openModal();currentSlide(2)" class="hover-shadow cursor"> 
+					</div>
+					<div class="column">
+						<img src="./images/thumb/thumbnail_2.png" width="100%"
+				onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+					</div>
+				</div>
+
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+
+						<div class="mySlides">
+							<div class="numbertext">1 / 3</div>
+							<img src="./images/thumb/Thumbnail_5.png" style="width: 100%">
+						</div>
+						<div class="mySlides">
+							<div class="numbertext">2 / 3</div>
+							<img src="./images/thumb/Thumbnail_4.png" style="width: 100%">
+						</div>
+						<div class="mySlides">
+							<div class="numbertext">3 / 3</div>
+							<img src="./images/thumb/Thumbnail_2.png" style="width: 100%">
+						</div>
+
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+						
+						<div class="caption-container">
+							<p id="caption"></p>
+						</div>
+
+						<div class="column">
+							<img class="demo cursor" src="./images/thumb/Thumbnail_5.png" style="width: 100%"
+					onclick="currentSlide(1)" alt="Caribou">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="./images/thumb/Thumbnail_4.png" style="width: 100%;"
+					onclick="currentSlide(2)" alt="Brown Bear">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="./images/thumb/Thumbnail_2.png" style="width: 100%;"
+					onclick="currentSlide(3)" alt="Lynx">
+						</div>
+					</div>
+				</div>
+	
+		<!-- VIDEO -->
+		<section>
+			<div id="video">
+				<div>
+					<iframe width="618" height="309" src="https://www.youtube.com/embed/muceZQM4x6g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div>
+						<p><b>In the Alaska Wild!</b></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END VIDEO -->
+		
+		<!-- NEWSLETTER -->
+		<section id="contact">
+			<div class="container">
+				<div class="heading-padding">
+					<h1 class="heading-padding"><center>Newsletter</center></h1>
+					<div class="reservation">
+						<h2><span>Learn about the subsitance lifestyle</span>
+						<br />Subscribe to the newsletter today!
+						</h2>
+						<p>
+							<center>Please provide us with your basic contact information to subscribe to our newsletter.</center>
+						</p>
+						<div class="form-rsvp">
+							<form action="" method="post">
+								<input class="rsvp" type="text" value="First Name">
+								<input class="rsvp" type="text" value="Last Name">
+								<input class="rsvp" type="text" value="Email Address">
+								<input class="rsvp" type="text" value="Phone Number">
+								<div class="form-spacer">
+									<label class="terms">Terms and Conditions</label>
+								</div>
+								<div class="form-spacer">
+									<input type="submit" value="Submit">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END NEWSLETTER -->
+	
+		<!-- FOOTER -->
+		<div>
+			www.alaskanfrontier.alaska &nbsp;|&nbsp; &copy; 2020
+		</div>
+		<!-- END FOOTER -->
+	<script src="./JS/one_page_website.js"></script>
+	</body>
+</html>
