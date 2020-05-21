@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
         <head>
+            <link rel="stylesheet" type="text/css" href="CSS/fadeout.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script>
+                $(document).ready(function(){
+                  $(".btn1").click(function(){
+                    $("p").fadeOut();
+                  });
+                  $(".btn2").click(function(){
+                    $("p").fadeIn();
+                  });
+                });
+            </script>
         </head>
         <body>
-            <h1>AFC South Quarterbacks</h1>
-            <h3>Click on a team name to see their Quarterback</h3>
 
-            <ul>
-                <li onclick="displayType(this)" id="Jaguars"
-                    data-quarterback="Gardner Minshew II">Jacksonville Jaguars</li>
-                <li onclick="displayType(this)" id="Colts"
-                    data-quarterback="Phillip Rivers">Indianapolis Colts</li>
-                <li onclick="displayType(this)" id="Texans"
-                    data-quarterback="Deshaun Watson">Houston Texans</li>
-                <li onclick="displayType(this)" id="Titans"
-                    data-quarterback="Ryan Tannehill">Tennessee Titans</li>
-            </ul>
+            <h1 style="font-size: 5vw;">AFC South Quarterbacks</h1>
+            <h3 style="font-size: 3vw;">Click on a team name to see their Quarterback</h3>
+                <ul style="font-size: 2vw;">
+                    <li onclick="displayType(this)" id="Jaguars"
+                        data-quarterback="Gardner Minshew II">Jacksonville Jaguars</li>
+                    <li onclick="displayType(this)" id="Colts"
+                        data-quarterback="Phillip Rivers">Indianapolis Colts</li>
+                    <li onclick="displayType(this)" id="Texans"
+                        data-quarterback="Deshaun Watson">Houston Texans</li>
+                    <li onclick="displayType(this)" id="Titans"
+                        data-quarterback="Ryan Tannehill">Tennessee Titans</li>
+                </ul>
+            <p>This is the fade-in and fade-out effect</p>
 
-
-
+            <button class="btn1">Fade out</button>
+            <button class="btn2">Fade in</button>
 
             <script src="JavaScript/JavaScript_3.js"></script>
         </body>
